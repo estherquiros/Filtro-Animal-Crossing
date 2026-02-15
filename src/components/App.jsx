@@ -7,7 +7,7 @@ import "../styles/App.scss";
 // Importamos componentes
 import Header from "./Header";
 import Footer from "./Footer";
-import Form from "./form";
+import Form from "./Form";
 import UsersList from "./UsersList";
 
 // Importamos imágenes
