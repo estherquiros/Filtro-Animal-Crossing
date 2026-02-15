@@ -1,0 +1,39 @@
+@import "./variables.scss";
+
+// ===== FOOTER =====
+.footer {
+  background-color: $color-pastel-blue;
+  padding: 2rem;
+  box-shadow: 0 -4px 12px rgba($color-neutral-dark, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__credits {
+    font-size: 0.9rem;
+    opacity: 0.8;
+  }
+}
+
+// ===== RESPONSIVE DESIGN =====
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem;
+
+    &__text {
+      font-size: 0.9rem;
+    }
+
+    &__credits {
+      font-size: 0.8rem;
+    }
+  }
+}

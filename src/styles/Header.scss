@@ -1,0 +1,31 @@
+@import "./variables.scss";
+
+// ===== HEADER =====
+.header {
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__logo {
+    height: 200px;
+    width: auto;
+  }
+}
+
+// ===== RESPONSIVE DESIGN =====
+@media (max-width: 768px) {
+  .header {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    &__title {
+      font-size: 1.5rem;
+    }
+  }
+}

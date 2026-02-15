@@ -1,0 +1,61 @@
+@import "./variables.scss";
+
+// ===== GALLERY / USUARIOS - BEM =====
+.gallery {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+// ===== CONTADOR DE FAVORITOS =====
+.favorites-counter {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: $color-accent;
+  text-align: center;
+  margin-bottom: 1rem;
+  background-color: white;
+  border-radius: 100%;
+  padding: 10px;
+  width: fit-content;
+}
+
+// ===== EMPTY STATE =====
+.empty-state {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba($color-neutral-dark, 0.08);
+
+  &__icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    color: $color-neutral-dark;
+    margin-bottom: 0.5rem;
+  }
+
+  &__message {
+    color: #999;
+    font-size: 1rem;
+  }
+}
+
+// ===== RESPONSIVE DESIGN =====
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

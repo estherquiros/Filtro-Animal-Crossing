@@ -1,0 +1,122 @@
+@import "./variables.scss";
+
+// ===== FLOWER ITEM - BEM =====
+.flower {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba($color-neutral-dark, 0.1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 12px 25px rgba($color-neutral-dark, 0.15);
+  }
+
+  &__image-container {
+    background-color: $color-pastel-peach;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    max-width: 180px;
+    max-height: 180px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba($color-neutral-dark, 0.1));
+  }
+
+  &__content {
+    padding: 1.5rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex-grow: 1;
+  }
+
+  &__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: $color-neutral-dark;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 0.9rem;
+    color: #777;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  &__action {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: $color-pastel-blue;
+    border: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+
+    &:hover {
+      background-color: $color-sage-green;
+    }
+
+    &:active {
+      box-shadow: inset 0 2px 4px rgba($color-neutral-dark, 0.2);
+    }
+  }
+}
+
+// ===== BOTÓN DE FAVORITO =====
+.flower__favorite-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: center;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+// ===== FLOWER ITEM FAVORITO =====
+.flower--favorite {
+  border: 3px solid $color-accent;
+  background-color: #fff8f5;
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba($color-neutral-dark, 0.2);
+  }
+}
+
+// ===== RESPONSIVE DESIGN =====
+@media (max-width: 768px) {
+  .flower {
+    &__image-container {
+      min-height: 180px;
+      padding: 1rem;
+    }
+
+    &__content {
+      padding: 1rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .flower {
+    &__image-container {
+      min-height: 200px;
+    }
+  }
+}
